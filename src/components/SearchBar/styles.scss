@@ -1,0 +1,37 @@
+.searchbar__container {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.searchbar {
+	display: flex;
+	justify-content: center;
+	gap: 0.3rem;
+
+	input {
+		font-size: 1.2rem;
+		width: 20rem;
+		height: 2.5rem;
+		padding-left: 1rem;
+		border-radius: 0.2rem;
+		border: 2px solid rgb(237, 237, 237);
+		box-shadow: 2px 2px 4px 0px rgba(122, 122, 122, 0.574);
+		&:focus {
+			outline: 1px solid rgba(248, 31, 31, 0.361);
+		}
+	}
+	button {
+		height: 2.5rem;
+		width: 5rem;
+		border: 0;
+		font-size: 1.2rem;
+		border-radius: 0.2rem;
+		background-color: rgb(10, 85, 176);
+		box-shadow: 2px 2px 4px 0px rgba(122, 122, 122, 0.574);
+		color: white;
+		&:hover {
+			filter: brightness(0.9);
+		}
+	}
+}

@@ -1,0 +1,19 @@
+$imgWidth: 12rem;
+
+nav {
+	padding: 4rem 0;
+	height: 12rem;
+
+	display: flex;
+	justify-content: flex-end;
+}
+.navbar__container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.navbar__img {
+	width: $imgWidth;
+	margin-bottom: 1rem;
+}
