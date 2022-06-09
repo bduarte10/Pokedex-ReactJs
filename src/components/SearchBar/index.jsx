@@ -8,7 +8,6 @@ const SearchBar = (props) => {
 
 	const onChangeHandler = (e) => {
 		setSearch(e.target.value);
-		console.log(search);
 		if (e.target.value.length === 0) {
 			onSearch(null);
 		}
