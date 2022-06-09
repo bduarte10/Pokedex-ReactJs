@@ -1,0 +1,18 @@
+.pagination {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+.pagination-btn {
+	width: 2.2rem;
+	height: 2.2rem;
+	border-radius: 50%;
+	background-color: rgb(18, 18, 18);
+	color: white;
+	cursor: pointer;
+}
+.icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

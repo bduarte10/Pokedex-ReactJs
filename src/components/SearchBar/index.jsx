@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../SearchBar/styles.scss';
 import { searchPokemon } from '../../api';
+import { MagnifyingGlass } from 'phosphor-react';
 
 export const SearchBar = () => {
 	const [pokemon, setPokemon] = useState();
@@ -19,7 +20,9 @@ export const SearchBar = () => {
 		<div className="searchbar__container">
 			<div className="searchbar">
 				<input placeholder="Buscar Pokemon" onChange={onChangeHandler} />
-				<button onClick={onButtonClickHandler}>Buscar</button>
+				<button onClick={onButtonClickHandler}>
+					<MagnifyingGlass size={20} />
+				</button>
 			</div>
 			{pokemon ? (
 				<div>
