@@ -1,21 +1,22 @@
 import React, { useState } from 'react';
 import '../SearchBar/styles.scss';
-import { searchPokemon } from '../../api';
 import { MagnifyingGlass } from 'phosphor-react';
 
-export const SearchBar = () => {
-	const [pokemon, setPokemon] = useState();
-	const [search, setSearch] = useState('dito');
+const SearchBar = (props) => {
+	const { onSearch } = props;
+	const [search, setSearch] = useState('');
+
 	const onChangeHandler = (e) => {
 		setSearch(e.target.value);
+		console.log(search);
+		if (e.target.value.length === 0) {
+			onSearch(null);
+		}
 	};
-	const onButtonClickHandler = () => {
-		onSearchHandler(search);
+	const onButtonClickHandler = async () => {
+		onSearch(search);
 	};
-	const onSearchHandler = async (pokemon) => {
-		const result = await searchPokemon(pokemon);
-		setPokemon(result);
-	};
+
 	return (
 		<div className="searchbar__container">
 			<div className="searchbar">
@@ -24,13 +25,8 @@ export const SearchBar = () => {
 					<MagnifyingGlass size={20} />
 				</button>
 			</div>
-			{pokemon ? (
-				<div>
-					<div>Nome: {pokemon.name}</div>
-					<div>Peso: {pokemon.weight}</div>
-					<img src={pokemon.sprites.front_default} alt="imagem do pokemon" />
-				</div>
-			) : null}
 		</div>
 	);
 };
+
+export default SearchBar;
